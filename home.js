@@ -88,3 +88,14 @@ if(rail){
  window.addEventListener('resize',()=>{measure();x=clamp(x);render();});
  measure();render();
 }
+
+// VARIO modes: the buttons switch the manufacturer diagram and its description.
+const modeButtons=[...document.querySelectorAll('.vario-switch [data-mode]')];
+const modePanels=[...document.querySelectorAll('[data-mode-panel]')];
+if(modeButtons.length&&modePanels.length){
+ function showMode(index){modeButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));modePanels.forEach(panel=>{panel.hidden=Number(panel.dataset.modePanel)!==index;});}
+ modeButtons.forEach((button,index)=>{
+  button.addEventListener('click',()=>showMode(Number(button.dataset.mode)));
+  button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%modeButtons.length;if(event.key==='ArrowLeft')next=(index+modeButtons.length-1)%modeButtons.length;if(next!==undefined){event.preventDefault();modeButtons[next].focus();showMode(next);}});
+ });
+}
