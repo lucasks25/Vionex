@@ -1,11 +1,13 @@
 import './i18n.js';
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import {buildContact} from './contact.js';
 import leadership from './leadership.json';
 const $=selector=>document.querySelector(selector);
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const menuButton=$('.menu-button');const navigation=$('#navigation');
 const header=$('.header');
-const headerSections=[...document.querySelectorAll('main > section, .footer')];
+const headerSections=[...document.querySelectorAll('main > section, main > article, .footer')];
 let headerFrame=0;
 function updateHeader(){
  const probe=header.offsetHeight+24;
@@ -35,8 +37,11 @@ updateHeader();
 // The header takes its first state without animating; only later changes fade.
 requestAnimationFrame(()=>requestAnimationFrame(()=>header.classList.remove('is-static')));
 // Arriving at /#section jumps straight there; smooth scrolling is only for links clicked on the page.
-window.addEventListener('load',()=>setTimeout(()=>document.documentElement.classList.add('smooth-scroll'),50));
-navigation.querySelectorAll('a[href]').forEach(link=>{const target=new URL(link.href,location.origin);if(target.pathname!=='/'&&!target.hash&&target.pathname===location.pathname)link.setAttribute('aria-current','page');});
+// Fluid, inertial wheel scrolling (touch keeps the native feel); in-page anchors glide under the fixed header.
+const lenis=reducedMotion?null:new Lenis({autoRaf:true,lerp:.16,anchors:{offset:-(header.offsetHeight+16)}});
+if(lenis)new MutationObserver(()=>{if(document.body.classList.contains('menu-open'))lenis.stop();else lenis.start();}).observe(document.body,{attributes:true,attributeFilter:['class']});
+if(!lenis)window.addEventListener('load',()=>setTimeout(()=>document.documentElement.classList.add('smooth-scroll'),50));
+navigation.querySelectorAll('a[href]').forEach(link=>{const target=new URL(link.href,location.origin);if(target.pathname!=='/'&&!target.hash&&location.pathname.startsWith(target.pathname))link.setAttribute('aria-current','page');});
 function closeMenu(){navigation.classList.remove('open');document.body.classList.remove('menu-open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Abrir menu');}
 menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');navigation.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);});
 navigation.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));

@@ -1,1 +1,1 @@
-{"name":"vionex-med","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview --host 0.0.0.0","test":"node --test"},"devDependencies":{"vite":"^7.1.7"}}
+{"name":"vionex-med","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview --host 0.0.0.0","test":"node --test"},"devDependencies":{"vite":"^7.1.7"},"dependencies":{"lenis":"^1.3.26"}}

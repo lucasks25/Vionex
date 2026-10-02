@@ -15,8 +15,9 @@ export function resolveLocale({explicit, remembered, country, languages = []} = 
  const preference = normalizeLocale(explicit) || normalizeLocale(remembered);
  if (preference) return preference;
  const code = typeof country === 'string' ? country.trim().toUpperCase() : '';
- if (code === 'US') return 'en-US';
+ // Visitors in Brazil read Portuguese; any other detected country gets American English.
  if (code === 'BR') return 'pt-BR';
+ if (/^[A-Z]{2}$/.test(code)) return 'en-US';
  for (const language of languages) {
   if (/^en(?:-|$)/i.test(language)) return 'en-US';
   if (/^pt(?:-|$)/i.test(language)) return 'pt-BR';

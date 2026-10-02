@@ -16,10 +16,16 @@ test('explicit URL or manual selection takes priority over remembered preference
 test('a remembered manual preference wins over country detection', () => {
  assert.equal(locale.resolveLocale?.({remembered:'pt-BR',country:'US'}),'pt-BR');
 });
-test('unknown country and invalid stored values use the first supported browser language', () => {
+test('any country outside Brazil opens in American English, regardless of browser language', () => {
  assert.equal(locale.resolveLocale?.({explicit:'xx',remembered:'xx',country:'DE',languages:['fr-FR','en-GB','pt-BR']}),'en-US');
- assert.equal(locale.resolveLocale?.({country:'DE',languages:['pt-PT']}),'pt-BR');
+ assert.equal(locale.resolveLocale?.({country:'DE',languages:['pt-PT']}),'en-US');
+ assert.equal(locale.resolveLocale?.({country:'PT',languages:['pt-PT']}),'en-US');
+ assert.equal(locale.resolveLocale?.({country:'BR',languages:['en-US']}),'pt-BR');
+});
+test('without a detected country, the first supported browser language decides', () => {
+ assert.equal(locale.resolveLocale?.({languages:['en-GB','pt-BR']}),'en-US');
  assert.equal(locale.resolveLocale?.({languages:['es-MX']}),'pt-BR');
+ assert.equal(locale.resolveLocale?.({country:'??',languages:['pt-PT']}),'pt-BR');
 });
 test('unsupported explicit locales do not silently become supported overrides', () => {
  assert.equal(locale.normalizeLocale?.('en-GB'),null);

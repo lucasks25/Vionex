@@ -25,7 +25,8 @@
 @media (max-width: 760px) { :root { --header-h: 72px; --section: 80px; --pad: 20px; } }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); background: var(--navy-deep); overscroll-behavior-y: none; }
+/* The canvas behind the page is navy and elastic overscroll is off, so no white edge shows past the header or footer. */
 /* Smooth scrolling only for in-page links (main.js adds the class after load), so arriving at /#section jumps straight there. */
 html.smooth-scroll { scroll-behavior: smooth; }
 body { margin: 0; background: var(--white); color: var(--text); font: 400 17px/1.55 var(--font); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }

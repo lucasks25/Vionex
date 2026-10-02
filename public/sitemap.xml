@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.vionex.med.br/</loc></url>
-  <url><loc>https://www.vionex.med.br/likawave/</loc></url>
-  <url><loc>https://www.vionex.med.br/solucoes/</loc></url>
-  <url><loc>https://www.vionex.med.br/sobre/</loc></url>
-  <url><loc>https://www.vionex.med.br/contato/</loc></url>
-  <url><loc>https://www.vionex.med.br/equipamentos-de-ondas-de-choque/</loc></url>
+  <url><loc>https://www.vionex.med.br/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/sobre/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/solucoes/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/likawave/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/contato/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/equipamentos-de-ondas-de-choque/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/anvisa-cosmeticos-artesanais/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/anvisa-receitas-controladas-sncr/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/eua-processos-fisioterapia-relatorio-2026/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/eua-surto-salmonella-jalapenos-encerrado/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/fda-aprova-tavapadon-parkinson/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/fda-camzyos-cardiomiopatia-hipertrofica-pediatrica/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/fda-novos-medicamentos-terceiro-trimestre-2026/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/oms-estimativas-globais-de-saude-2026/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://www.vionex.med.br/blog/ondas-de-choque-radial-ou-focal-tendinopatias/</loc><lastmod>2026-10-02</lastmod></url>
 </urlset>
