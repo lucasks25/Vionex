@@ -98,6 +98,7 @@
 .footer-contact-item svg.whatsapp-icon { fill: var(--teal-light); stroke: none; }
 .footer-contact-item small { display: block; margin-bottom: 2px; color: #aabacd; font-size: 12px; }
 .footer-contact-item:hover, .footer-social a:hover { color: var(--teal-light); }
+.footer-social { display: grid; gap: 14px; }
 .footer-social a { align-items: center; margin-bottom: 0; }
 .footer-social svg { margin-top: 0; }
 .footer-cols { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; }

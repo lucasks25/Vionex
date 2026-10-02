@@ -220,7 +220,7 @@ export default {
  'sua clínica precisa.': 'your clinic needs.',
  'Conheça o Likawave, consulte as condições e solicite uma proposta com nossa equipe.': 'Explore Likawave, discuss terms, and request a quote from our team.',
  'Começar uma conversa': 'Start a conversation',
- 'Rua Alegre, 470, 5º andar': 'Rua Alegre, 470, 5th floor',
+ 'Rua Joana Angélica, 249': 'Rua Joana Angélica, 249',
  'Acompanhe @vionexmed': 'Follow @vionexmed',
  'Likawave · Aplicação clínica': 'Likawave · Clinical application',
  'Fechar vídeo': 'Close video',
@@ -454,7 +454,7 @@ export default {
  "Perguntas frequentes": "Frequently asked questions",
  "Histórias Vionex": "Vionex stories",
  "Solicitar demonstração": "Request a demonstration",
- "Rua Alegre, 470, 5º andar · São Caetano do Sul, SP": "Rua Alegre, 470, 5th floor · São Caetano do Sul, SP",
+ "Rua Joana Angélica, 249 · São Caetano do Sul, SP": "Rua Joana Angélica, 249 · São Caetano do Sul, SP",
  "Detalhe do aplicador Likawave em uso clínico, em fotografia de referência da LiKAMED": "Close-up of the Likawave applicator in clinical use, in a LiKAMED reference photograph",
  "Tecnologia e parceria:": "Technology and partnership:",
  "Conheça a Vionex:": "Get to know Vionex:",
@@ -845,5 +845,6 @@ export default {
  "A meta-análise mostra que a escolha entre radial e focal ainda não pode se basear em uma superioridade clara de uma delas. Ganham peso a documentação técnica do equipamento, a experiência da equipe e a avaliação individual de cada paciente. No Likawave VARIO 3i, a LiKAMED apresenta o Wide Focus como um foco de área em vez de uma zona focal pequena.": "The meta-analysis shows that the choice between radial and focused cannot yet rest on a clear superiority of either. Equipment documentation, team experience and individual patient assessment carry more weight. In the Likawave VARIO 3i, LiKAMED presents Wide Focus as an area focus instead of a small focal zone.",
  "Vionex News": "Vionex News",
  "News": "News",
- "Vionex News, início do blog": "Vionex News, blog home"
+ "Vionex News, início do blog": "Vionex News, blog home",
+ "LinkedIn da Vionex": "Vionex on LinkedIn"
 };

@@ -59,7 +59,7 @@ test('country cache expires and ignores malformed or future timestamps', () => {
 test('English translation preserves whitespace and leaves unknown text untouched', () => {
  assert.equal(locale.translateText?.('  Engenharia alemã.\n','en-US'),'  German engineering.\n');
  assert.equal(locale.translateText?.('Presença Vionex.','en-US'),'Vionex by your side.');
- assert.equal(locale.translateText?.('Rua Alegre, 470, 5º andar','en-US'),'Rua Alegre, 470, 5th floor');
+ assert.equal(locale.translateText?.('Rua Joana Angélica, 249','en-US'),'Rua Joana Angélica, 249');
  assert.equal(locale.translateText?.('User-entered unknown text','en-US'),'User-entered unknown text');
  assert.equal(locale.translateText?.('Engenharia alemã.','pt-BR'),'Engenharia alemã.');
 });
