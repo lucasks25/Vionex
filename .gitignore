@@ -1,0 +1,15 @@
+# Dependencies and build output
+node_modules/
+dist/
+
+# Local tooling data
+.claude/
+.claude-flow/
+.swarm/
+ruvector.db
+**/.claude-flow/
+
+# System files
+.DS_Store
+.env
+.env.*

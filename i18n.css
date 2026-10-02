@@ -1,0 +1,7 @@
+/* PT/EN switcher, styled as the compact language control of the header */
+.language-switcher { display: flex; align-items: center; gap: 2px; line-height: 1; }
+.language-switcher > span { color: rgba(255, 255, 255, .45); font: 400 11px/1 var(--font, 'Inter', sans-serif); }
+.language-switcher button { min-width: 28px; height: 28px; padding: 0 4px; border: 0; background: none; color: rgba(255, 255, 255, .62); font: 500 11px/1 var(--font, 'Inter', sans-serif); letter-spacing: .08em; transition: color .2s; }
+.language-switcher button:hover { color: #fff; }
+.language-switcher button[aria-pressed='true'] { color: var(--teal-light, #5fd0dc); }
+.language-switcher button:focus-visible { outline: 2px solid var(--teal-light, #5fd0dc); outline-offset: 2px; }

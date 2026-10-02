@@ -1,0 +1,100 @@
+/* LiKAMED Open Sans is limited to Likawave product content. Corporate chrome keeps Inter. */
+:root{--product-font:'Open Sans',Arial,sans-serif}
+.product-presentation,.product-page main>section:not(.get-started):not(.partners){font-family:var(--product-font)}
+.product-presentation :is(h2,h3,button,.btn),.product-page main>section:not(.get-started):not(.partners) :is(h1,h2,h3,button,.btn){font-family:var(--product-font)}
+.product-official-mark{position:relative;display:block;width:170px;height:57px;overflow:hidden;mix-blend-mode:multiply}
+.product-official-mark>img{position:absolute;width:219px;height:155px;max-width:none;left:-24px;top:-49px;object-fit:contain}
+.product-origin{display:block;color:#397f93;font-size:9px;letter-spacing:1.35px;font-weight:600;margin:19px 0 15px}
+.product-presentation-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:28px}
+.product-presentation-heading h2,.product-page .product-hero-copy h1{font-size:clamp(46px,5vw,64px);line-height:1.08;letter-spacing:-.055em;font-weight:600;color:#10213d;margin:0}
+.product-presentation-heading h2>span,.product-hero-copy h1>span{font-weight:400;color:#397f93}
+.product-presentation-heading>p{font-size:14px;line-height:1.85;max-width:320px;color:#627087;margin-bottom:4px}
+.product-presentation-grid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:48px;align-items:center}
+.product-presentation .product-studio{position:relative;isolation:isolate;background:radial-gradient(ellipse at 45% 50%,#e9f1f777,transparent 65%);min-height:0;aspect-ratio:800/590;display:flex;align-items:center;order:0}
+.product-presentation .sol-stage::before{content:none}
+.product-presentation .product-figure{width:100%}
+.product-presentation .product-figure>img{width:100%;height:auto;transform:none;animation:none}
+.product-studio-word{position:absolute;z-index:-1;right:7%;top:0;font-family:var(--product-font);font-size:clamp(150px,17vw,245px);line-height:1;letter-spacing:-.09em;font-weight:600;color:#eef3f7;pointer-events:none}
+.product-photo-credit{position:absolute;bottom:0;left:4%;color:#7b8c9e;font-size:8px;letter-spacing:.3px}
+.product-presentation .home-hotspot{width:34px;height:34px;background:#f7f9fc;color:#10213d;border:0;box-shadow:0 0 0 4px #e1edf390,0 3px 10px #10213d15;transform:translate(-50%,-50%);transition:background .2s;color:#10213d}
+.product-presentation .home-hotspot:hover,.product-presentation .home-hotspot[aria-pressed=true]{transform:translate(-50%,-50%);background:#10213d;color:#fff}
+.product-presentation .spot-one{left:49%;top:43%}.product-presentation .spot-two{left:17%;top:70%}.product-presentation .spot-three{left:84%;top:66%}
+.product-detail-hint{font-size:8px;letter-spacing:1.2px;color:#7b8c9e}
+.product-detail-buttons{display:flex;gap:24px;margin:12px 0 26px}
+.product-detail-buttons button{min-height:44px;padding:8px 0;border:0;background:none;color:#627087;font-size:12px;font-weight:500}
+.product-detail-buttons button[aria-pressed=true]{color:#397f93;font-weight:700}
+.product-presentation #home-detail-panel{min-height:235px}
+.product-presentation .home-detail-label{display:block;font-size:9px;letter-spacing:1.2px;text-transform:uppercase;color:#397f93;font-weight:600}
+.product-presentation .home-detail-title{font-size:28px;line-height:1.3;letter-spacing:-.04em;color:#10213d;font-weight:600;margin:14px 0 18px}
+.product-presentation .home-detail-text{font-size:13px;line-height:1.9;color:#627087}
+.product-presentation-actions{display:flex;align-items:flex-start;flex-direction:column;gap:10px}
+.product-presentation .btn,.product-page .product-hero-copy .btn{background:#10213d;border-color:#10213d;color:#fff;border-radius:26px;letter-spacing:0;text-transform:none;min-height:46px;font-size:11px;padding:12px 22px;white-space:normal;text-align:center;line-height:1.5}
+.product-presentation .btn:hover,.product-page .product-hero-copy .btn:hover{background:#244262}
+.product-demo{font-size:11px;color:#397f93;min-height:36px;display:inline-flex;align-items:center;padding:0 4px;font-weight:600}
+.product-spec-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:44px}
+.product-spec-strip dd{font-family:var(--product-font);font-size:32px;font-weight:600;letter-spacing:-.05em;color:#10213d;line-height:1.35;white-space:nowrap}
+.product-spec-strip dd>span{font-size:.48em;font-weight:500;letter-spacing:0}
+.product-spec-strip dt{font-size:10px;line-height:1.6;color:#627087;margin-top:7px}
+.product-source{font-size:9px;color:#7b8c9e;margin-top:30px;line-height:1.8}
+.product-source a{color:#397f93;text-decoration:underline;text-underline-offset:3px}
+.product-presentation .home-product-popover{border:0;border-radius:18px;box-shadow:0 15px 40px #10213d22;animation:product-popover-enter .2s ease-out both}
+.product-presentation .home-popover-photo{background:#f1f5f8;border-radius:8px}.product-presentation .home-popover-photo img{object-fit:contain}
+@keyframes product-popover-enter{from{opacity:0;translate:0 8px}to{opacity:1;translate:0 0}}
+/* Product hero: a static real photograph on a light studio background. */
+.product-page .likawave-product-hero{background:#f7f9fc;color:#10213d;padding-top:calc(var(--header-h) + 72px)}
+.product-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:50px;align-items:center}
+.product-hero-copy .product-official-mark{margin-bottom:4px}
+.product-hero-tagline{font-size:25px;line-height:1.35;letter-spacing:-.035em;color:#397f93;margin:28px 0 20px;font-weight:500}
+.product-hero-description{font-size:13px;line-height:1.9;color:#627087;max-width:370px;margin-bottom:28px}
+.product-hero-studio{position:relative;isolation:isolate;background:radial-gradient(ellipse,#e6eff6aa,transparent 66%)}
+.product-hero-studio img{width:100%;height:auto;transform:none}
+.product-hero-studio figcaption{font-size:8px;color:#7b8c9e;margin-top:10px;text-align:center}
+.product-hero-studio .product-studio-word{top:-17%;font-size:240px;right:5%}
+.product-page .likawave-product-hero .subnav{padding-top:46px}
+.product-page .likawave-product-hero .subnav-label{color:#627087}
+.product-page .likawave-product-hero .subnav-tabs{background:transparent;border:0;gap:24px;display:flex}
+.product-page .likawave-product-hero .subnav-tabs a{border:0;min-height:52px;font-size:11px;letter-spacing:0;padding:0;color:#627087;text-transform:none}
+.product-page .likawave-product-hero .subnav-tabs a[aria-current=true]{box-shadow:none;color:#397f93;font-weight:600}
+/* Restore the prior Wide Focus composition, retaining the unaltered map. */
+.home-focus{background:#10213d;color:#f7f9fc;border-radius:70px 0 70px 0}
+.home-focus-heading{max-width:880px;margin-bottom:38px}
+.home-focus-kicker{font-size:10px;letter-spacing:1.5px;font-weight:600;color:#a4d1dc}
+.home-focus h2{font-family:Manrope,Inter,sans-serif;font-size:clamp(40px,4vw,56px);font-weight:600;line-height:1.15;letter-spacing:-.045em;margin-top:24px}
+.home-focus h2 em{color:#8fc5d1;font-weight:500}
+.home-focus-workspace{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(32px,5vw,76px);align-items:center}
+.home-focus-map{min-width:0}
+.home-focus-chart{position:relative;overflow:hidden;border-radius:22px;outline-offset:6px;cursor:crosshair}
+.home-focus-chart img{width:100%;height:auto}
+.home-focus-energy{position:absolute;left:19.6%;top:23.2%;width:59.9%;height:54.8%;overflow:hidden;pointer-events:none}
+.home-focus-sweep{position:absolute;top:0;bottom:0;left:0;width:1px;background:#ffffffb0;box-shadow:0 0 18px 5px #b9efff3b;animation:focus-field-travel 8s ease-in-out infinite alternate}
+.home-focus-sweep::before{content:'';position:absolute;top:0;bottom:0;left:-18px;width:36px;background:linear-gradient(90deg,transparent,#ffffff18,transparent)}
+.home-focus-chart.is-exploring .home-focus-sweep{animation:none;left:var(--field-position,50%);transition:left .12s ease-out}
+.home-focus-map figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 16px;padding-top:16px;font-size:9px;line-height:1.5;color:#91aabe}
+.home-focus-map figcaption small{flex-basis:100%;font-size:8px}
+.home-focus-story h3{font-family:Manrope,Inter,sans-serif;font-size:30px;font-weight:600;line-height:1.24;letter-spacing:-.035em;margin-bottom:20px;color:#f7f9fc}
+.home-focus-story p{font-size:13px;line-height:1.85;color:#b5c7db;margin-bottom:28px}
+.home-focus-story .btn{font-size:11px;min-height:46px;padding:12px 22px;letter-spacing:0;text-transform:none;border-radius:26px;background:#60a9ba;border-color:#60a9ba;color:#10213d}
+@keyframes focus-field-travel{from{left:0;opacity:.25}to{left:99.7%;opacity:.7}}
+@media(max-width:860px){.product-presentation-grid,.product-hero-grid{grid-template-columns:1fr;gap:32px}.product-presentation .product-studio{width:min(100%,600px);margin:auto}.product-hero-studio{width:min(100%,560px);margin:auto}.product-presentation #home-detail-panel{min-height:0;margin-bottom:26px}.product-presentation-copy{max-width:550px}.product-hero-copy{max-width:530px}}
+@media(max-width:760px){
+ .product-presentation-heading{display:block;margin-bottom:24px}
+ .product-presentation-heading h2,.product-page .product-hero-copy h1{font-size:48px}
+ .product-presentation-heading>p{font-size:12px;margin-top:24px;max-width:none}
+ .product-presentation .product-studio{aspect-ratio:800/620}
+ .product-studio-word{font-size:165px;top:3%}
+ .product-detail-buttons{gap:28px;margin-bottom:22px}
+ .product-presentation .home-detail-title{font-size:27px}.product-presentation .home-detail-text{font-size:12px}
+ .product-spec-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 20px;margin-top:40px}
+ .product-spec-strip dd{font-size:29px}
+ .product-photo-credit{font-size:7px;left:2%}
+ .product-page .likawave-product-hero{padding-top:calc(var(--header-h) + 44px)}
+ .product-hero-tagline{font-size:25px}.product-hero-studio .product-studio-word{font-size:175px;top:-3%}
+ .product-page .likawave-product-hero .subnav-tabs{gap:22px;justify-content:space-between}
+ .home-focus{border-radius:38px 0 38px 0}
+ .home-focus h2{font-size:37px}.home-focus-heading{margin-bottom:28px}
+ .home-focus-workspace{grid-template-columns:1fr;gap:28px}.home-focus-story h3{font-size:28px}
+ .home-focus-story p{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.product-presentation .home-product-popover{animation:none}.home-focus-sweep{animation:none;left:50%}.home-focus-chart.is-exploring .home-focus-sweep{transition:none}}
+/* Give the equipment more stage than the shared editorial text grid. */
+.product-presentation>.wrap,.product-page .likawave-product-hero>.wrap{width:min(100% - 2 * var(--pad),1160px)}
