@@ -201,6 +201,17 @@
  .hero-badge strong { font-size:12px; }
  .hero-badge .flag-swoosh { width:32px; }
 }
+/* Phones: the wide hero video becomes a band under the header, framed on the applicator and shoulder; the text follows on navy. */
+@media(max-width:760px) {
+ .hero { height:auto; min-height:0; flex-direction:column; padding:var(--header-h) 0 28px; }
+ .hero::before { display:none; }
+ .hero-media { position:relative; inset:auto; flex:none; height:min(48svh,400px); }
+ .hero-media video,.hero-media img { object-position:76% 60%; }
+ .hero-media::after { background:linear-gradient(0deg,#0a1730 0%,rgba(10,23,48,.55) 22%,rgba(10,23,48,0) 50%),linear-gradient(180deg,rgba(10,23,48,.45) 0%,rgba(10,23,48,0) 22%); }
+ .hero-inner { margin-top:-36px; }
+ .hero-copy { padding-bottom:8px; }
+ .hero-figures { margin-top:28px; }
+}
 @media(max-height:640px) and (min-width:761px) {
  .hero { min-height:500px; padding-top:calc(var(--header-h) + 20px); padding-bottom:20px; }
  .hero h1 { font-size:32px; }
