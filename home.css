@@ -22,25 +22,43 @@
 .flag-swoosh { width: 46px; height: 34px; }
 
 /* Stories: dark band with four cards */
-.stories { padding-top: 64px; background: linear-gradient(180deg, #0a1730 0%, #0a1730 300px, #fff 300px); }
-.stories h2 { color: #fff; }
-.stories-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 36px; }
+.stories { padding-top: var(--section); background: #fff; }
+.stories .wrap { width: min(100% - 2 * var(--pad), 1240px); }
+.stories h2 { color: var(--ink); font-size: clamp(30px, 2.8vw, 40px); }
+.stories h2 .accent { color: var(--teal-text); }
+/* Rail starts at the content edge and bleeds past the right side of the viewport; home.js loops it while dragging. */
+.stories-rail { margin-top: 44px; margin-right: calc(50% - 50vw); overflow: hidden; cursor: grab; touch-action: pan-y; -webkit-user-select: none; user-select: none; }
+.stories-rail.is-dragging { cursor: grabbing; }
+.stories-rail.is-dragging .story a { pointer-events: none; }
+.stories-track { display: flex; gap: 16px; width: max-content; will-change: transform; }
+.stories-track .story { flex: none; width: clamp(240px, 24vw, 330px); aspect-ratio: 4 / 5; }
+.story-reel { position: absolute; top: 14px; right: 14px; z-index: 1; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(4, 12, 28, .55); }
+.story-reel svg { width: 14px; height: 14px; margin-left: 2px; fill: #fff; }
+.stories-track img { -webkit-user-drag: none; pointer-events: none; }
+.stories-arrows { display: flex; justify-content: flex-end; gap: 8px; margin-top: -40px; }
+.stories-arrows button { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid #c9d2db; background: #fff; color: var(--ink); transition: border-color .2s, color .2s; }
+.stories-arrows button:hover { border-color: var(--teal); color: var(--teal-text); }
+.stories-arrows svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; }
 .story { position: relative; overflow: hidden; aspect-ratio: 4 / 5.2; background: #111; color: #fff; }
 .story img, .story video { width: 100%; height: 100%; object-fit: cover; transition: transform .6s var(--ease); }
 .story:hover img { transform: scale(1.04); }
 .story::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(4, 12, 28, .85) 0%, rgba(4, 12, 28, .2) 45%, transparent 70%); pointer-events: none; }
-.story-caption { position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 1; font-size: 14px; line-height: 1.35; }
-.story-caption small { display: block; margin-bottom: 4px; color: var(--teal-light); font-size: 11px; letter-spacing: .1em; }
+.story-caption { position: absolute; left: 20px; right: 20px; bottom: 20px; z-index: 1; font-size: 17px; line-height: 1.4; }
+.story-caption small { display: block; margin-bottom: 6px; color: var(--teal-light); font-size: 12px; letter-spacing: .1em; }
 .story-play { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; border: 0; background: transparent; }
-.story-play span { display: grid; place-items: center; width: 54px; height: 54px; border: 1.5px solid #fff; border-radius: 50%; }
+.story-play span { display: grid; place-items: center; width: 68px; height: 68px; border: 1.5px solid #fff; border-radius: 50%; }
 .story-play svg { width: 18px; height: 18px; margin-left: 3px; fill: #fff; }
 .story.is-playing::after, .story.is-playing .story-caption, .story.is-playing .story-play { display: none; }
 
 /* Statement */
-.stories { padding-bottom: clamp(128px,12vw,192px); }
-.statement { text-align: center; }
-.statement .h-rule { margin-inline: auto; }
-.statement .lead { max-width: 720px; margin-inline: auto; color: var(--teal-text); }
+.stories { padding-bottom: var(--section); }
+.statement-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 64px; align-items: center; }
+.statement .lead { max-width: 520px; color: var(--teal-text); }
+/* The statement introduces the solutions below: one white block with a short gap. */
+.statement { padding-bottom: 0; }
+.statement + .solutions { padding-top: clamp(64px, 6vw, 88px); }
+.statement-film figcaption { margin-top: 12px; color: var(--muted); font-size: 13px; }
+@media (max-width: 860px) { .statement-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; } }
 
 /* Solutions: list, product in a light circle, interest card, solution tabs */
 .solutions-grid { position: relative; display: grid; grid-template-columns: 224px minmax(0, 1fr) 216px; gap: 28px; align-items: start; min-height: 480px; }
@@ -132,7 +150,6 @@
   .sol-side { flex-direction: row; flex-wrap: wrap; }
   .recommended { text-align: center; }
   .recommended img { margin-left: 0; }
-  .stories-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 760px) {
   .hero { min-height: 0; padding-top: calc(var(--header-h) + 70px); }
@@ -189,7 +206,7 @@
 }
 
 /* A direct company contact, without repeated promotional cards. */
-.home-contact { background:var(--navy); }
+.home-contact { background:var(--navy-deep); }
 .home-contact-grid { display:grid; grid-template-columns:1.2fr 1fr; align-items:center; gap:88px; }
 .home-contact-eyebrow { margin-bottom:22px; color:var(--teal-light); font-size:11px; letter-spacing:.14em; }
 .home-contact h2 { text-align:left; font-size:clamp(28px,2.8vw,38px); line-height:1.3; }
@@ -242,7 +259,7 @@
 .home-contact-whatsapp { color:var(--teal-light); font-size:14px; text-decoration:underline; text-underline-offset:4px; }
 
 /* Leadership presentation follows the supplied Siemens photo/text overlap. */
-.home-leadership { background:var(--navy-deep); padding-block:80px 144px; }
+.home-leadership { background:var(--navy-deep); padding-block:var(--section) calc(var(--section) + 64px); }
 .home-leadership-grid { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); align-items:start; gap:0; max-width:932px; }
 .home-leadership-photo { grid-column:1 / 8; grid-row:1; width:100%; }
 .home-leadership-portrait { height:auto; aspect-ratio:1; }
@@ -266,3 +283,56 @@
 .home-contact-details .home-contact-whatsapp span { margin:0; color:inherit; font-size:inherit; }
 .home-contact-details .home-contact-whatsapp:hover { background:#eef0f3; }
 .home-contact-whatsapp:focus-visible,.whatsapp-number:focus-visible { outline:2px solid var(--teal-light); outline-offset:5px; }
+
+/* Compact clinical video beside the distribution statement */
+.film { position: relative; overflow: hidden; aspect-ratio: 16 / 10; background: #0a1730; box-shadow: 0 18px 40px rgba(16, 33, 61, .16); }
+.film video { width: 100%; height: 100%; object-fit: cover; }
+.film::after { content: ''; position: absolute; inset: 0; background: rgba(6, 18, 40, .18); pointer-events: none; }
+.film-play { position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; border: 0; background: transparent; color: #fff; }
+.film-play span { display: grid; place-items: center; width: 64px; height: 64px; border: 1.5px solid #fff; border-radius: 50%; background: rgba(255, 255, 255, .12); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); transition: transform .3s var(--ease), background-color .3s; }
+.film-play svg { width: 20px; height: 20px; margin-left: 3px; fill: #fff; }
+.film-play:hover span { transform: scale(1.06); background: rgba(95, 208, 220, .35); }
+.film.is-playing::after, .film.is-playing .film-play { display: none; }
+.film video { cursor: pointer; }
+.film-controls { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; display: flex; align-items: center; gap: 14px; padding: 28px 16px 14px; background: linear-gradient(0deg, rgba(6, 18, 40, .82), transparent); color: #fff; opacity: 0; transition: opacity .3s; }
+.film:hover .film-controls, .film.is-paused .film-controls, .film-controls:focus-within { opacity: 1; }
+.film-controls button { display: grid; place-items: center; flex: none; width: 32px; height: 32px; padding: 0; border: 0; background: none; color: #fff; transition: color .2s; }
+.film-controls button:hover { color: var(--teal-light); }
+.film-controls svg { width: 20px; height: 20px; fill: currentColor; }
+.film-controls svg .wave { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.fc-toggle .i-play, .film.is-paused .fc-toggle .i-pause, .fc-mute .i-muted, .film.is-muted .fc-mute .i-sound { display: none; }
+.film.is-paused .fc-toggle .i-play, .film.is-muted .fc-mute .i-muted { display: block; }
+.fc-bar { position: relative; flex: 1; height: 16px; cursor: pointer; touch-action: none; }
+.fc-bar::before, .fc-buffer, .fc-fill { content: ''; position: absolute; left: 0; top: 50%; height: 3px; border-radius: 3px; transform: translateY(-50%); transition: height .2s; }
+.fc-bar::before { right: 0; background: rgba(255, 255, 255, .25); }
+.fc-buffer { width: 0; background: rgba(255, 255, 255, .35); }
+.fc-fill { width: 0; background: var(--teal-light); }
+.fc-fill::after { content: ''; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; border-radius: 50%; background: #fff; transform: translateY(-50%) scale(0); transition: transform .2s; }
+.fc-bar:hover::before, .fc-bar:hover .fc-buffer, .fc-bar:hover .fc-fill { height: 5px; }
+.fc-bar:hover .fc-fill::after, .fc-bar:focus-visible .fc-fill::after { transform: translateY(-50%) scale(1); }
+.fc-time { flex: none; min-width: 84px; font-size: 13px; font-variant-numeric: tabular-nums; color: rgba(255, 255, 255, .9); }
+.film:fullscreen { aspect-ratio: auto; box-shadow: none; }
+.film:fullscreen video { object-fit: contain; background: #000; }
+
+/* Contact: both columns start on the same line, a thin rule separates them, matching buttons. */
+.home-leadership + .home-contact { margin-top: -1px; }
+.home-contact-grid { grid-template-columns: minmax(0, 500px) auto; justify-content: center; align-items: stretch; gap: 0; }
+.home-contact-copy { padding-right: clamp(40px, 6vw, 88px); }
+.home-contact-details { align-content: start; gap: 30px; padding: 40px 0 0 clamp(40px, 6vw, 88px); border-left: 1px solid rgba(255, 255, 255, .14); }
+.home-contact-details .home-contact-whatsapp { min-height: 44px; padding: 12px 18px; border: 1px solid rgba(255, 255, 255, .7); border-radius: 0; background: transparent; color: #fff; font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; transition: background-color .2s, color .2s, border-color .2s; }
+.home-contact-details .home-contact-whatsapp:hover { background: #fff; border-color: #fff; color: var(--navy); }
+.home-contact-details .home-contact-whatsapp svg { width: 18px; height: 18px; }
+@media (max-width: 860px) {
+  .home-contact-grid { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+  .home-contact-copy { padding-right: 0; }
+  .home-contact-details { padding: 40px 0 0; border-left: 0; border-top: 1px solid rgba(255, 255, 255, .14); }
+}
+
+/* Contact details in the footer's icon + label + value pattern */
+.home-contact-details { gap: 26px; }
+.home-contact-details .contact-item { display: flex; align-items: flex-start; gap: 16px; width: fit-content; color: #fff; font-size: clamp(18px, 1.6vw, 21px); font-weight: 300; line-height: 1.45; transition: color .2s; }
+.home-contact-details .contact-item small { display: block; margin-bottom: 4px; color: #aabacd; font-size: 13px; font-weight: 400; }
+.home-contact-details .contact-item svg { flex: none; width: 20px; height: 20px; margin-top: 24px; fill: none; stroke: var(--teal-light); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.home-contact-details .contact-item svg.whatsapp-icon { fill: var(--teal-light); stroke: none; color: var(--teal-light); }
+.home-contact-details .contact-item:hover { color: var(--teal-light); }
+.home-contact-details .contact-item > span { display: block; margin: 0; color: inherit; font-size: inherit; }

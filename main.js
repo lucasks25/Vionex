@@ -32,6 +32,10 @@ window.addEventListener('scroll',queueHeader,{passive:true});
 window.addEventListener('resize',queueHeader);
 window.addEventListener('load',updateHeader);
 updateHeader();
+// The header takes its first state without animating; only later changes fade.
+requestAnimationFrame(()=>requestAnimationFrame(()=>header.classList.remove('is-static')));
+// Arriving at /#section jumps straight there; smooth scrolling is only for links clicked on the page.
+window.addEventListener('load',()=>setTimeout(()=>document.documentElement.classList.add('smooth-scroll'),50));
 navigation.querySelectorAll('a[href]').forEach(link=>{const target=new URL(link.href,location.origin);if(target.pathname!=='/'&&!target.hash&&target.pathname===location.pathname)link.setAttribute('aria-current','page');});
 function closeMenu(){navigation.classList.remove('open');document.body.classList.remove('menu-open');menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Abrir menu');}
 menuButton.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');navigation.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);});
@@ -76,3 +80,12 @@ if(form){const interest=new URLSearchParams(location.search).get('interesse');if
 if(dialog){$('#close-dialog').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});}
 
 if('IntersectionObserver' in window&&!reducedMotion){const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.06});document.querySelectorAll('main .band .h-section,.stories-grid,.solutions-grid,.split-grid,.steps,.cat-grid,.tech-grid,.focus-grid,.app-grid,.faq,.gs-grid').forEach(el=>{el.classList.add('will-reveal');observer.observe(el);});}
+
+// Equipment "+" points: hover and focus are handled in CSS; a tap toggles the description on touch screens.
+const specSpots=[...document.querySelectorAll('.spec-spot')];
+if(specSpots.length){
+ const closeSpots=except=>specSpots.forEach(spot=>{if(spot!==except){spot.classList.remove('is-open');spot.setAttribute('aria-expanded','false');}});
+ specSpots.forEach(spot=>spot.addEventListener('click',()=>{const open=!spot.classList.contains('is-open');closeSpots(spot);spot.classList.toggle('is-open',open);spot.setAttribute('aria-expanded',String(open));}));
+ document.addEventListener('pointerdown',event=>{if(!event.target.closest('.spec-spot'))closeSpots();});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape')closeSpots();});
+}
