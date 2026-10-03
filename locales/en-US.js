@@ -846,5 +846,19 @@ export default {
  "Vionex News": "Vionex News",
  "News": "News",
  "Vionex News, início do blog": "Vionex News, blog home",
- "LinkedIn da Vionex": "Vionex on LinkedIn"
+ "LinkedIn da Vionex": "Vionex on LinkedIn",
+ "MAPA DO SITE": "SITE MAP",
+ "Todas as páginas": "Every page",
+ "da Vionex Med.": "of Vionex Med.",
+ "Likawave e soluções": "Likawave and solutions",
+ "Todas as notícias": "All news",
+ "Likawave VARIO 3i no Brasil e tecnologia Wide Focus": "Likawave VARIO 3i in Brazil and Wide Focus technology",
+ "Quem somos, como trabalhamos e liderança": "Who we are, how we work and leadership",
+ "Telefone, e-mail, WhatsApp e endereço": "Phone, email, WhatsApp and address",
+ "Tecnologia, Wide Focus, aplicações e perguntas frequentes": "Technology, Wide Focus, applications and FAQ",
+ "Como escolher um equipamento de ondas de choque": "How to choose a shockwave device",
+ "O que avaliar antes da compra": "What to evaluate before buying",
+ "Likawave, equipamentos e insumos, fármacos, higiene e beleza": "Likawave, equipment and supplies, pharmaceuticals, hygiene and beauty",
+ "Saúde, regulação e tecnologia médica com fontes": "Health, regulation and medical technology with sources",
+ "Mapa do site | Vionex Med": "Site map | Vionex Med"
 };

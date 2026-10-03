@@ -190,3 +190,10 @@
   .spec-plus, .spec-plus::after { width: 12px; }
   .spec-tip { width: 200px; font-size: 13px; }
 }
+
+/* Mapa do site */
+.sitemap-group { margin-top: 48px; padding-top: 22px; border-top: 1px solid var(--line); }
+.sitemap-group h2 { margin: 0 0 18px !important; font-size: 13px !important; font-weight: 500 !important; letter-spacing: .14em; text-transform: uppercase; }
+.sitemap-group ul { display: grid; gap: 14px; }
+.sitemap-group a { color: var(--teal-text); font-size: 17px; text-decoration: underline; text-underline-offset: 3px; }
+.sitemap-group span { display: block; margin-top: 2px; color: var(--muted); font-size: 14px; }
