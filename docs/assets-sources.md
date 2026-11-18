@@ -46,3 +46,12 @@ Downloaded official Pulse, Triangle, Invert and Linear diagrams from https://lik
 `vagner-office-library.png`: montagem produzida com a ferramenta de edição de imagem a pedido do usuário, usando `vagner-monferrer.png` como referência de identidade. Ambiente gerado; não representa uma fotografia documental do escritório. O original foi preservado.
 
 `vagner-office-natural.png`: segunda montagem, com iluminação difusa e ambiente de biblioteca mais discreto. Aplicada à seção de liderança em composição retangular com texto sobreposto, conforme referência enviada da Siemens.
+
+## Home: advisory section (stock photography)
+
+Added 2026-11-16 for the advisory section of the home page. Both are generic stock photographs under the [Unsplash License](https://unsplash.com/license) (free commercial use, no attribution required). They do not depict Vionex staff or clients, so their alt text describes the scene without naming Vionex. Replace them with real photos of the Vionex team when available.
+
+| Local asset | Dimensions | Source | Changes |
+|---|---|---|---|
+| `public/assets/assessoria-reuniao.webp` | 1400 × 1050 | [Unsplash photo-1551836022-d5d88e9218df](https://images.unsplash.com/photo-1551836022-d5d88e9218df) | Cropped to 4:3; the laptop manufacturer's logo was removed |
+| `public/assets/assessoria-documentos.webp` | 720 × 720 | [Unsplash photo-1454165804606-c3d57bc86b40](https://images.unsplash.com/photo-1454165804606-c3d57bc86b40) | Cropped to a square |

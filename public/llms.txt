@@ -1,6 +1,6 @@
 # Vionex Med
 
-> A Vionex Med é a distribuidora exclusiva no Brasil do Likawave VARIO 3i, equipamento de terapia por ondas de choque fabricado pela LiKAMED (Alemanha). A empresa fica em São Caetano do Sul (SP) e atende clínicas, hospitais e consultórios com equipamentos e soluções ambulatoriais, orientação comercial, treinamento da equipe e suporte técnico.
+> A Vionex Med é a distribuidora exclusiva no Brasil do Likawave VARIO 3i, equipamento de terapia por ondas de choque fabricado pela LiKAMED (Alemanha). A empresa fica em São Caetano do Sul (SP) e atua em duas frentes: equipamentos médicos para clínicas e hospitais, e assessoria para fabricantes e distribuidores.
 
 ## Fatos principais
 
@@ -11,6 +11,8 @@
 - Especificações: tela touch de 10,1 polegadas (interface VARIO LOGIC), 8,3 kg, aplicador com projétil de cerâmica HD e cabo de 2,5 metros.
 - Áreas de aplicação: ortopedia, reabilitação, medicina esportiva e fisioterapia. A indicação, os parâmetros e o tratamento são definidos por profissionais habilitados.
 - Serviços: demonstração do equipamento, proposta comercial, treinamento da equipe e acompanhamento técnico.
+- Assessoria para fabricantes e distribuidores: regulatório, análise de mercado, importação, hospedagem de registro e prospecção de produtos de saúde, cada serviço com consulta própria.
+- Catálogo inicial de equipamentos: Likawave VARIO 3i e Likawave 2i, com consulta específica para cada modelo.
 - Outras linhas: equipamentos e insumos ambulatoriais, fármacos e suplementação, higiene e beleza.
 - CEO: Vagner Monferrer Gonzales.
 - Contato: telefone e WhatsApp +55 11 5282-0777, e-mail comercial@vionex.med.br.
@@ -19,10 +21,10 @@
 
 ## Páginas
 
-- [Início](https://www.vionex.med.br/): Likawave VARIO 3i no Brasil, tecnologia Wide Focus, modos VARIO e contato.
+- [Início](https://www.vionex.med.br/): assessoria para fabricantes e distribuidores (regulatório, análise de mercado, importação, hospedagem de registro e prospecção de produtos de saúde), equipamentos médicos e contato.
 - [Likawave VARIO 3i](https://www.vionex.med.br/likawave/): tecnologia, mapa do Wide Focus, aplicações, especificações e perguntas frequentes.
 - [Como escolher um equipamento de ondas de choque](https://www.vionex.med.br/equipamentos-de-ondas-de-choque/): o que avaliar (tecnologia, aplicadores, parâmetros, treinamento e assistência), preço e demonstração.
-- [Soluções](https://www.vionex.med.br/solucoes/): Likawave, equipamentos e insumos, fármacos e suplementação, higiene e beleza.
+- [Equipamentos médicos](https://www.vionex.med.br/solucoes/): Likawave VARIO 3i, tecnologia Wide Focus, modos VARIO, catálogo com Likawave VARIO 3i e Likawave 2i, e outras linhas (equipamentos e insumos, fármacos e suplementação, higiene e beleza).
 - [A Vionex](https://www.vionex.med.br/sobre/): quem somos, como trabalhamos e liderança.
 - [Contato](https://www.vionex.med.br/contato/): formulário para WhatsApp, telefone, e-mail e endereço.
 - [Vionex News](https://www.vionex.med.br/blog/): notícias de saúde, regulação e tecnologia médica com fontes.

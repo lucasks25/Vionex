@@ -352,3 +352,45 @@
 .home-contact-details .contact-item svg.whatsapp-icon { fill: var(--teal-light); stroke: none; color: var(--teal-light); }
 .home-contact-details .contact-item:hover { color: var(--teal-light); }
 .home-contact-details .contact-item > span { display: block; margin: 0; color: inherit; font-size: inherit; }
+
+/* Início com duas frentes: equipamentos médicos e assessoria. */
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+.hero-actions .btn { margin-top: 0; }
+/* Sem vídeo: a abertura da assessoria usa o azul da marca e o anel decorativo do .hero. */
+.hero--advisory { background: radial-gradient(1000px 640px at 82% 18%, #1b4a78 0%, transparent 68%), linear-gradient(180deg, #0a1730 0%, #0f2a4a 100%); }
+.home-advisory .body { max-width: 620px; }
+.band--mist { background: #f2f5f8; color: var(--text); }
+.home-equipment-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 64px; align-items: center; }
+.home-equipment-copy .btn { margin-top: 28px; }
+.equipment-models { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 26px; }
+.equipment-models a { display: block; height: 100%; padding: 14px 16px; border: 1px solid var(--line); background: #fff; color: var(--ink); font-size: 17px; transition: border-color .2s, color .2s; }
+.equipment-models a:hover { border-color: var(--teal); color: var(--teal-text); }
+.equipment-models small { display: block; margin-bottom: 4px; color: var(--teal-text); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; }
+.home-equipment-photo img { width: 100%; height: auto; }
+@media (max-width: 860px) { .home-equipment-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; } .home-equipment-photo { order: -1; } }
+@media (max-width: 420px) { .equipment-models { grid-template-columns: minmax(0, 1fr); } }
+/* No celular a abertura original sobe o texto sobre a faixa do vídeo; sem vídeo, o texto começa abaixo do cabeçalho. */
+@media(max-width:760px) { .hero--advisory .hero-inner { margin-top:0; padding-top:44px; } }
+/* Assessoria na home: texto e fotos lado a lado, com selo sobre a foto principal. */
+.advisory-intro { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.2fr); gap: 56px; align-items: center; margin-bottom: 72px; }
+.advisory-intro-copy .btn { margin-top: 28px; }
+.advisory-visual { position: relative; margin: 0; padding: 0 0 0 64px; }
+.advisory-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.advisory-photo-detail { position: absolute; left: 0; top: 48px; width: 38%; height: auto; aspect-ratio: 1; object-fit: cover; border: 6px solid #fff; box-shadow: 0 18px 40px rgba(16, 33, 61, .16); }
+.advisory-badge { position: relative; z-index: 1; display: grid; gap: 10px; margin: -64px 40px 0 -64px; padding: 30px 34px 32px; background: var(--navy); color: #fff; border-top: 4px solid var(--teal); box-shadow: 0 24px 50px rgba(16, 33, 61, .28); }
+.advisory-badge strong { color: var(--teal-light); font-size: 13px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+.advisory-badge span { font-size: clamp(26px, 2.4vw, 34px); font-weight: 300; line-height: 1.12; text-wrap: balance; }
+.advisory-badge em { padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, .18); color: rgba(255, 255, 255, .72); font-size: 14px; font-style: normal; }
+@media (max-width: 860px) {
+ .advisory-intro { grid-template-columns: minmax(0, 1fr); gap: 40px; margin-bottom: 48px; }
+ .advisory-visual { padding: 0 0 0 36px; }
+ .advisory-photo-detail { top: 32px; }
+ .advisory-badge { margin: -56px 24px 0 -36px; padding: 24px 26px; }
+ .advisory-badge span { font-size: 26px; }
+}
+@media (max-width: 600px) {
+ .advisory-visual { padding: 0; }
+ .advisory-photo-detail { display: none; }
+ .advisory-badge { margin: -48px 16px 0; padding: 22px 24px; }
+ .advisory-badge span { font-size: 24px; }
+}
